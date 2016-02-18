@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fact Checker</title>
+
+    <link rel="stylesheet" type="text/css" href="static/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<form method="post">
+    <input type="text" name="sample" placeholder="Enter text here"/>
+</form>
+
+<p>Please enter your text</p>
+{% if opinion %}
+Your text was an opinion!
+{% elif opinion == false %}
+Your text sounds like a fact!
+{% endif %}
+
+</body>
+</html>
