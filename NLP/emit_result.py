@@ -144,6 +144,9 @@ def vectorize(vectorizer, list_of_texts, is_train):
 
 # ### 3. SVC classifier
 
+def get_words_from_string(article):
+    return [w.lower() for w in nltk.word_tokenize(article) if w.isalpha() and (w not in STOP_WORDS or w.lower() not in STOP_WORDS)]
+
 def prepare_clf():
     news_set = news_scraper()
     opinion_set = opinion_scraper()
@@ -158,6 +161,7 @@ def train(data):
     settings.vectorizer = vectorizer
 
 def predict_sample(article, vectorizer, clf):
+    article = get_words_from_string(article)
     sample = vectorize(vectorizer, [' '.join(article) + ' ' + ' '.join(t for w,t in nltk.pos_tag(article))], TEST)
     y_pred = clf.predict(sample)
     return y_pred
