@@ -1,4 +1,21 @@
-body {
+#instruction {
     padding-top: 100px;
-    padding-left: 500px
+    text-align: center;
+}
+
+input {
+	width: 600px;
+	height: 300px;
+	text-align: center;
+}
+
+form {
+	width: 600px;
+	height: 300px;
+	padding-left: 300px;
+}
+
+p {
+	padding-top: 10px;
+	text-align: center;
 }
