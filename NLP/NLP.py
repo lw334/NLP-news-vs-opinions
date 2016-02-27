@@ -16,8 +16,8 @@ def render_result():
         return render_template('index.html', text=text, opinion=opinion)
 
 def is_opinion(text):
-    print(settings.vectorizer)
-    return predict_sample(text, settings.vectorizer,settings.clf)
+    #print(settings.vectorizer)
+    return predict_sample(text, settings.vectorizer, settings.clf)
 
 
 if __name__ == "__main__":
