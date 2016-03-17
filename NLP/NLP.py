@@ -17,7 +17,7 @@ def render_result():
 
 def is_opinion(text):
     #print(settings.vectorizer)
-    return predict_sample(text, settings.vectorizer, settings.clf)
+    return predict_sample(text, settings.vectorizer, settings.clf, settings.scaler)
 
 
 if __name__ == "__main__":
